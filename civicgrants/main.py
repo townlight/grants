@@ -25,9 +25,9 @@ from civicgrants.public_ui import render_public_lookup_page
 
 
 app = FastAPI(
-    title="CivicGrants",
+    title='Townlight Grants',
     version=__version__,
-    description="Grant opportunity triage, eligibility, drafting, compliance, and audit-file support for CivicSuite.",
+    description='Grant opportunity triage, eligibility, drafting, compliance, and audit-file support for Townlight.',
 )
 
 _grant_repository: GrantRecordsRepository | None = None

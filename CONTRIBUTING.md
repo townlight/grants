@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping CivicGrants become useful municipal software.
+Thank you for helping Townlight Grants become useful municipal software.
 
 ## Development Loop
 
@@ -11,8 +11,8 @@ Thank you for helping CivicGrants become useful municipal software.
 
 ## Boundaries
 
-- CivicGrants gives grant-support drafts, not official eligibility decisions, submissions, legal advice, or system-of-record updates.
+- Townlight Grants gives grant-support drafts, not official eligibility decisions, submissions, legal advice, or system-of-record updates.
 - Do not present generated eligibility matches or application outlines as submission-ready without staff review.
-- Do not import CivicCore placeholder packages.
+- Do not import Townlight Core placeholder packages.
 - Do not claim planned behavior is shipped.
 
