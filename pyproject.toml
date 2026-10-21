@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "civicgrants"
 version = "0.2.0"
-description = "CivicGrants runtime foundation for grant opportunity triage, eligibility, application, compliance, and audit-file support."
+description = "Townlight Grants runtime foundation for grant opportunity triage, eligibility, application, compliance, and audit-file support."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0-only" }

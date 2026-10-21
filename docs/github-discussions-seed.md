@@ -1,8 +1,10 @@
 # GitHub Discussions Seed Posts
 
-## Welcome to CivicGrants
+<a id="welcome-to-civicgrants"></a>
 
-CivicGrants is the CivicSuite module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, and audit-ready grant files.
+## Welcome to Townlight Grants
+
+Townlight Grants is the Townlight module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, and audit-ready grant files.
 
 ## v0.1.0 Release Discussion
 

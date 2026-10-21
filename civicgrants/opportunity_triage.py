@@ -1,4 +1,4 @@
-"""Deterministic grant opportunity triage helpers for CivicGrants v0.2.0."""
+"""Deterministic grant opportunity triage helpers for Townlight Grants v0.2.0."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 
 DISCLAIMER = (
-    "CivicGrants provides grant-support drafts only. Staff own every decision; "
+    "Townlight Grants provides grant-support drafts only. Staff own every decision; "
     "the module does not determine eligibility, submit applications, or replace the grant system of record."
 )
 

@@ -36,7 +36,7 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     assert payload["version"] == "0.2.0"
     assert payload["status"] == "grant support foundation plus grant persistence"
     assert "staff review queues" in payload["message"]
-    assert "CivicRecords grant context packets" in payload["message"]
+    assert "Townlight Records grant context packets" in payload["message"]
     assert "official eligibility decisions" in payload["message"]
     assert "not implemented" in payload["message"]
     assert payload["next_step"].startswith("Configure CIVICGRANTS_GRANT_DB_URL")

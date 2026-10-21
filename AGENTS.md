@@ -1,18 +1,20 @@
-# CivicGrants Agent Contract
+<a id="civicgrants-agent-contract"></a>
+
+# Townlight Grants Agent Contract
 
 ## Source of Truth
 
-- Upstream suite spec: `CivicSuite/civicsuite/docs/CivicSuiteUnifiedSpec.md`, especially the CivicGrants catalog entry and suite-wide non-negotiables.
-- CivicGrants supports opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, and audit-ready grant files.
+- Upstream suite spec: `townlight/townlight/docs/CivicSuiteUnifiedSpec.md`, especially the Townlight Grants catalog entry and suite-wide non-negotiables.
+- Townlight Grants supports opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, and audit-ready grant files.
 - Staff own every decision.
 
 ## Hard Boundaries
 
-- CivicGrants never determines official eligibility, submits applications, provides legal advice, or updates a grant system of record.
-- CivicGrants v0.2.0 must not call live LLMs or live funder feeds.
+- Townlight Grants never determines official eligibility, submits applications, provides legal advice, or updates a grant system of record.
+- Townlight Grants v0.2.0 must not call live LLMs or live funder feeds.
 - Application outlines and eligibility matches must be marked review-required.
-- CivicGrants depends on CivicCore; CivicCore must never depend on CivicGrants.
-- CivicGrants may reference CivicRecords concepts only through released contracts, context IDs, or deterministic sample data in this recovery release.
+- Townlight Grants depends on Townlight Core; Townlight Core must never depend on Townlight Grants.
+- Townlight Grants may reference Townlight Records concepts only through released contracts, context IDs, or deterministic sample data in this recovery release.
 
 ## Verification
 
