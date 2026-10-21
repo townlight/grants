@@ -183,7 +183,7 @@ def test_get_compliance_calendar_without_persistence_returns_actionable_503(monk
 
     assert response.status_code == 503
     detail = response.json()["detail"]
-    assert detail["message"] == "CivicGrants grant persistence is not configured."
+    assert detail["message"] == "Townlight Grants grant persistence is not configured."
     assert "Set CIVICGRANTS_GRANT_DB_URL" in detail["fix"]
 
 

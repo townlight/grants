@@ -1,4 +1,4 @@
-"""Adversarial local integration contracts for CivicGrants."""
+"""Adversarial local integration contracts for Townlight Grants."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ def validate_grant_context_mocks(payload: dict[str, Any]) -> IntegrationMockResu
     if payload.get("role") not in {"staff", "service"}:
         findings.append("Rejected grant context without trusted staff or service role.")
     if not payload.get("records_context_id"):
-        findings.append("Missing CivicRecords context ID; preserve the source grant file before drafting.")
+        findings.append("Missing Townlight Records context ID; preserve the source grant file before drafting.")
     if not payload.get("grant_file_context_id"):
         findings.append("Missing grant file context ID; confirm the local grant file before review.")
     if payload.get("official_eligibility") is True:
@@ -47,8 +47,8 @@ def validate_grant_context_mocks(payload: dict[str, Any]) -> IntegrationMockResu
         review_required=True,
         findings=tuple(findings),
         boundary=(
-            "CivicGrants validates local integration context only; it does not call live "
-            "CivicRecords, funder feeds, LLM, submission portal, legal, award, or grant "
+            "Townlight Grants validates local integration context only; it does not call live "
+            "Townlight Records, funder feeds, LLM, submission portal, legal, award, or grant "
             "system-of-record services in this recovery release."
         ),
     )

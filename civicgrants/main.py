@@ -1,4 +1,4 @@
-"""FastAPI runtime foundation for CivicGrants."""
+"""FastAPI runtime foundation for Townlight Grants."""
 
 import os
 
@@ -107,9 +107,9 @@ def root() -> dict[str, str]:
         "version": __version__,
         "status": "grant support foundation plus grant persistence",
         "message": (
-            "CivicGrants package, API foundation, sample opportunity triage, eligibility matching, "
+            "Townlight Grants package, API foundation, sample opportunity triage, eligibility matching, "
             "application outline helper, compliance calendar helper, optional database-backed grant "
-            "opportunity and compliance records, staff review queues, review-required CivicRecords grant "
+            "opportunity and compliance records, staff review queues, review-required Townlight Records grant "
             "context packets, adversarial local integration mocks, audit-ready export checklist, and public "
             "UI foundation are online; live funder feeds, official eligibility decisions, legal advice, "
             "live LLM calls, submission portals, award acceptance, and grant system-of-record integrations "
@@ -210,7 +210,7 @@ def get_compliance_calendar(compliance_id: str) -> dict[str, object]:
         raise HTTPException(
             status_code=503,
             detail={
-                "message": "CivicGrants grant persistence is not configured.",
+                "message": "Townlight Grants grant persistence is not configured.",
                 "fix": "Set CIVICGRANTS_GRANT_DB_URL to retrieve persisted compliance calendar records.",
             },
         )
@@ -234,7 +234,7 @@ def grant_review_context(request: GrantContextRequest) -> dict[str, object]:
     )
     citations = [f"Grant triage context: {triage.recommended_owner}"]
     if request.records_context_id:
-        citations.append(f"CivicRecords context: {request.records_context_id}")
+        citations.append(f"Townlight Records context: {request.records_context_id}")
     if request.grant_file_context_id:
         citations.append(f"Grant file context: {request.grant_file_context_id}")
     return {
@@ -247,7 +247,7 @@ def grant_review_context(request: GrantContextRequest) -> dict[str, object]:
         "recommended_owner": triage.recommended_owner,
         "review_required": True,
         "boundary": (
-            "CivicGrants provides grant review context only; it is not an official eligibility "
+            "Townlight Grants provides grant review context only; it is not an official eligibility "
             "decision, legal opinion, application submission, award acceptance, live funder-feed "
             "result, or grant system-of-record action."
         ),
@@ -329,7 +329,7 @@ def update_staff_review(
         raise HTTPException(
             status_code=404,
             detail={
-                "message": "CivicGrants staff review item was not found.",
+                "message": "Townlight Grants staff review item was not found.",
                 "fix": "List staff reviews and retry with an existing review_id.",
             },
         )
@@ -397,7 +397,7 @@ def _require_persistence_configured() -> None:
         raise HTTPException(
             status_code=503,
             detail={
-                "message": "CivicGrants staff review persistence is not configured.",
+                "message": "Townlight Grants staff review persistence is not configured.",
                 "fix": "Set CIVICGRANTS_GRANT_DB_URL before using staff review queue routes.",
             },
         )

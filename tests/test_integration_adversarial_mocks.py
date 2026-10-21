@@ -26,7 +26,7 @@ def test_adversarial_mock_rejects_spoofed_submission_and_missing_context() -> No
     assert "Rejected grant context without trusted staff or service role." in result.findings
     assert "Rejected attempted official eligibility determination in integration context." in result.findings
     assert "Rejected attempted grant application submission in integration context." in result.findings
-    assert "does not call live CivicRecords" in result.boundary
+    assert "does not call live Townlight Records" in result.boundary
 
 
 def test_integration_mock_api_accepts_complete_staff_context_for_review() -> None:
@@ -81,6 +81,6 @@ def test_grant_review_context_carries_records_and_grant_file_references() -> Non
     payload = response.json()
     assert payload["grant_id"] == "grant-2026-001"
     assert payload["review_required"] is True
-    assert "CivicRecords context: records-context-123" in payload["citations"]
+    assert "Townlight Records context: records-context-123" in payload["citations"]
     assert "Grant file context: grant-file-456" in payload["citations"]
     assert "not an official eligibility decision" in payload["boundary"]

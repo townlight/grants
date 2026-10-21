@@ -1,10 +1,10 @@
-"""Static public UI shell for CivicGrants v0.2.0."""
+"""Static public UI shell for Townlight Grants v0.2.0."""
 
 from __future__ import annotations
 
 
 def render_public_lookup_page() -> str:
-    """Render the public-facing CivicGrants sample page."""
+    """Render the public-facing Townlight Grants sample page."""
 
     return """<!DOCTYPE html>
 <html lang="en">
