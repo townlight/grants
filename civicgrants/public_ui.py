@@ -67,7 +67,7 @@ def render_public_lookup_page() -> str:
     <article class="card large"><p class="kicker">Boundary</p><h2>No official grant action</h2><div class="result warning"><p>CivicGrants does not determine eligibility, submit applications, accept awards, provide legal advice, call live LLMs, use live funder feeds, or replace the grant system of record.</p></div></article>
   </section>
 </main>
-<footer><p>CivicGrants is part of the Apache 2.0 CivicSuite open-source municipal AI project.</p></footer>
+<footer><p>CivicGrants is part of the AGPL-3.0 CivicSuite open-source municipal AI project.</p></footer>
 </body>
 </html>
 """
