@@ -1,20 +1,75 @@
+  Parked foundation — outside the released Windows suite. This repository contains exploratory/support code, not a completed Townlight product. It is not installed or supported by Windows 1.8.1.1. Historical examples, package names and dependency pins below describe this foundation and must not be used as current suite installation instructions. Use the released Windows suite, current modules and acceptance limits.
+
 Townlight Grants
-===========
 
 Townlight Grants is the Townlight module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, staff review queues, review-required Townlight Records grant context packets, adversarial local integration mocks, and audit-ready grant files.
 
-Current state: v0.2.0 grant support and staff review queue runtime. It ships a FastAPI package aligned to the published Townlight Core v1.0.0 release wheel, deterministic and database-backed grant opportunity triage, compliance-calendar records, staff-only review queue workflows, review-required CivicRecords/grant-file context packets, adversarial local integration mocks, application outline helper, audit-ready export checklist, and accessible public sample UI at /civicgrants.
+Current state: v0.2.0 grant support and staff review queue runtime. This repo ships a FastAPI package aligned to the historical CivicCore v1.1.0 release wheel, health/root endpoints, documentation gates, deterministic and database-backed grant opportunity triage, compliance-calendar records, staff-only review queue workflows, review-required CivicRecords/grant-file context packets, adversarial local integration mocks, application outline helper, audit-ready export checklist, and accessible public sample UI at /civicgrants. It does not ship live funder feeds, official eligibility decisions, legal advice, live LLM calls, submission portals, award acceptance, or grant system-of-record integrations.
 
-It does not decide official eligibility, submit grant applications, accept awards, provide legal advice, call live LLMs, call live funder feeds, or replace a grant system of record.
+What Townlight Grants Does
 
-Staff routes require CIVICGRANTS_GRANT_DB_URL plus CIVICGRANTS_STAFF_API_KEY and trusted headers:
+- Triage sample grant opportunities and recommend a staff owner.
+- Match sample eligibility factors that staff must verify.
+- Draft application outlines for staff review.
+- Build compliance-calendar scaffolds for awarded grants.
+- Persist grant opportunity and compliance-calendar records when CIVICGRANTS_GRANT_DB_URL is configured.
+- Route grant review work through staff-only queue endpoints protected by CIVICGRANTS_STAFF_API_KEY.
+- Carry Townlight Records and grant-file context IDs into review-required packets without calling those systems live.
+- Validate adversarial local integration mocks for spoofed roles, official eligibility attempts, submission attempts, award-acceptance attempts, legal-advice claims, stale context, and live funder-feed claims.
+- Produce audit-ready export checklists for grant files.
+- Demonstrate a public grant-support UI at /civicgrants.
 
-- X-CivicGrants-Role: staff or service
-- X-CivicGrants-Staff-Key: configured staff key
+What Townlight Grants Does Not Do
 
-Local development:
+- It does not decide official eligibility.
+- It does not submit grant applications.
+- It does not accept grant awards.
+- It does not provide legal advice.
+- It does not call live LLMs or live funder feeds in this recovery release.
+- It does not replace a grant management system of record.
 
-python -m pip install https://github.com/CivicSuite/civiccore/releases/download/v1.0/civiccore-1.0.0-py3-none-any.whl
-python -m pip install -e ".[dev]"
-python -m pytest -q
-bash scripts/verify-release.sh
+Townlight Core Dependency
+
+Townlight Grants installs against the historical CivicCore v1.1.0 release wheel:
+
+    python -m pip install https://github.com/townlight/core/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+
+API Surface
+
+- GET / returns the shipped/planned boundary.
+- GET /health returns package and Townlight Core versions.
+- GET /civicgrants returns the accessible public sample UI.
+- POST /api/v1/civicgrants/opportunities/triage returns sample opportunity triage.
+- POST /api/v1/civicgrants/eligibility/match returns staff-review eligibility factors.
+- POST /api/v1/civicgrants/applications/outline returns an application outline and a staff_review_id when persistence is configured.
+- POST /api/v1/civicgrants/compliance/calendar returns compliance reminders and a compliance_id when persistence is configured.
+- GET /api/v1/civicgrants/compliance/{compliance_id} retrieves a persisted compliance calendar when CIVICGRANTS_GRANT_DB_URL is configured.
+- POST /api/v1/civicgrants/context/grant-review returns review-required CivicRecords/grant-file context.
+- POST /api/v1/civicgrants/integrations/mock/grant-context validates local adversarial integration payloads.
+- POST /api/v1/civicgrants/staff/reviews creates a staff-only review queue item.
+- GET /api/v1/civicgrants/staff/reviews lists staff-only review queue items.
+- PATCH /api/v1/civicgrants/staff/reviews/{review_id} updates staff-only queue status, assignment, and resolution.
+- GET /api/v1/civicgrants/staff/reviews/summary returns staff queue counts.
+- POST /api/v1/civicgrants/export returns an audit-file export checklist.
+
+Optional Persistence And Staff Queue
+
+Set CIVICGRANTS_GRANT_DB_URL to enable local SQLAlchemy-backed grant records:
+
+    export CIVICGRANTS_GRANT_DB_URL="sqlite+pysqlite:///./civicgrants.db"
+
+Set CIVICGRANTS_STAFF_API_KEY before using staff-only review routes:
+
+    export CIVICGRANTS_STAFF_API_KEY="replace-with-city-secret"
+
+Staff routes require X-CivicGrants-Role: staff and X-CivicGrants-Staff-Key matching the configured key. Townlight Grants uses Townlight Core staff_key_gate for timing-safe key comparison. Without persistence, Townlight Grants remains deterministic and stateless. Retrieval and staff-only endpoints return actionable 503 responses that name the required configuration.
+
+Local Development
+
+    python -m pip install -e ".[dev]"
+    python -m pytest -q
+    bash scripts/verify-release.sh
+
+License
+
+Code: AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. See LICENSE and LICENSE-EXCEPTION.md. Documentation: CC BY 4.0 (LICENSE-DOCS).
