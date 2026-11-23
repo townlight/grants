@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civicgrants.integration_mocks import validate_grant_context_mocks
-from civicgrants.main import app
+from townlight_grants.integration_mocks import validate_grant_context_mocks
+from townlight_grants.main import app
 
 
 client = TestClient(app)

@@ -3,28 +3,23 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-import civicgrants
-from civicgrants.main import app
+import townlight_grants
+from townlight_grants.main import app
 
 
 client = TestClient(app)
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_package_version_is_100() -> None:
-    assert civicgrants.__version__ == "0.2.0"
+def test_package_version() -> None:
+    assert townlight_grants.__version__ == "0.3.0"
 
 
-def test_pyproject_uses_published_civiccore_release_wheel() -> None:
+def test_pyproject_pins_townlight_core() -> None:
     data = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     dependencies = data["project"]["dependencies"]
 
-    assert data["tool"]["hatch"]["metadata"]["allow-direct-references"] is True
-    assert (
-        "civiccore @ https://github.com/CivicSuite/civiccore/releases/download/"
-        "v1.1.0/civiccore-1.1.0-py3-none-any.whl#sha256=3ab146f4fea2ae99640d5b1b013be1a9676de5f91b783eaeaa913043a2ae2b87"
-    ) in dependencies
-    assert "civiccore==1.0.0" not in dependencies
+    assert "townlight-core==1.3.0.dev2" in dependencies
 
 
 def test_root_endpoint_states_runtime_boundary() -> None:
@@ -33,7 +28,7 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     payload = response.json()
 
     assert payload["name"] == "CivicGrants"
-    assert payload["version"] == "0.2.0"
+    assert payload["version"] == "0.3.0"
     assert payload["status"] == "grant support foundation plus grant persistence"
     assert "staff review queues" in payload["message"]
     assert "Townlight Records grant context packets" in payload["message"]
@@ -49,8 +44,8 @@ def test_health_endpoint_reports_versions() -> None:
 
     assert payload["status"] == "ok"
     assert payload["service"] == "civicgrants"
-    assert payload["version"] == "0.2.0"
-    assert payload["civiccore_version"] == "1.1.0"
+    assert payload["version"] == "0.3.0"
+    assert payload["civiccore_version"] == "1.3.0.dev2"
 
 
 def test_release_gate_prefers_native_unix_python_before_windows_launcher() -> None:

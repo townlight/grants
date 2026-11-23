@@ -2,15 +2,17 @@
 
 # Townlight Grants User Manual
 
+Townlight Grants 0.3.0 is part of the upcoming Windows suite candidate. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings.
+
 ## For Non-Technical Users
 
 Townlight Grants helps city staff keep grant opportunities, eligibility notes, application outlines, reporting dates, staff review queues, Townlight Records context references, and audit files organized. It can triage an opportunity, show eligibility factors for staff verification, draft an application outline, build a compliance-calendar scaffold, and preserve review-required grant file context.
 
-Current state: 0.2.0 grant support and staff review queue runtime. Townlight Grants can optionally save grant opportunity, compliance-calendar, and staff review queue records when IT configures `CIVICGRANTS_GRANT_DB_URL`. Staff-only review routes also require `CIVICGRANTS_STAFF_API_KEY`. Townlight Grants does not provide official eligibility decisions, legal advice, live funder feeds, live LLM calls, submission portals, award acceptance, or grant system-of-record updates. Staff own every decision.
+Current state: 0.3.0 grant support and staff review queue runtime. Townlight Grants can optionally save grant opportunity, compliance-calendar, and staff review queue records when IT configures `CIVICGRANTS_GRANT_DB_URL`. Staff-only review routes also require `CIVICGRANTS_STAFF_API_KEY`. Townlight Grants does not provide official eligibility decisions, legal advice, live funder feeds, live LLM calls, submission portals, award acceptance, or grant system-of-record updates. Staff own every decision.
 
 ## For IT and Technical Staff
 
-Townlight Grants is a FastAPI Python package pinned to the published `civiccore v1.0.0` release wheel. The current runtime exposes:
+Townlight Grants is a FastAPI Python package pinned to `townlight-core==1.3.0.dev2`. The current runtime exposes:
 
 - `GET /`
 - `GET /health`
@@ -36,7 +38,7 @@ Set `CIVICGRANTS_GRANT_DB_URL` to enable local SQLAlchemy-backed grant records. 
 Run:
 
 ```bash
-python -m pip install https://github.com/CivicSuite/civiccore/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+python -m pip install "townlight-core @ git+https://github.com/townlight/core.git@2f6ba9be4a95e3772dc47a3682ac780c5283b626"
 python -m pip install -e ".[dev]"
 python -m pytest -q
 bash scripts/verify-release.sh
@@ -46,11 +48,11 @@ bash scripts/verify-release.sh
 
 ```mermaid
 flowchart LR
-  Staff["Grant staff / finance / administration"] --> CivicGrants["CivicGrants v0.2.0"]
-  CivicGrants --> CivicCore["CivicCore v1.0.0"]
+  Staff["Grant staff / finance / administration"] --> CivicGrants["Townlight Grants v0.3.0"]
+  CivicGrants --> CivicCore["Townlight Core 1.3.0.dev2"]
   CivicGrants -. released context ID .-> CivicRecords["CivicRecords AI"]
   CivicGrants --> Queue["Staff review queue"]
   CivicGrants --> Export["Audit-ready grant file export"]
 ```
 
-Townlight Grants depends on Townlight Core. Townlight Core does not depend on Townlight Grants. Townlight Grants v0.2.0 uses deterministic sample data plus optional staff-gated persistence, review-required context packets for CivicRecords/grant-file references, staff review queue records, and adversarial local mocks for integration-depth validation.
+Townlight Grants depends on Townlight Core. Townlight Core does not depend on Townlight Grants. Townlight Grants v0.3.0 uses deterministic sample data plus optional staff-gated persistence, review-required context packets for CivicRecords/grant-file references, staff review queue records, and adversarial local mocks for integration-depth validation.

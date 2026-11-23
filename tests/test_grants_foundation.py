@@ -1,11 +1,11 @@
 from fastapi.testclient import TestClient
 
-from civicgrants.application_draft import draft_application_outline
-from civicgrants.audit_file import build_audit_file_export
-from civicgrants.compliance_calendar import build_compliance_calendar
-from civicgrants.eligibility import match_grant_eligibility
-from civicgrants.main import app
-from civicgrants.opportunity_triage import triage_opportunity
+from townlight_grants.application_draft import draft_application_outline
+from townlight_grants.audit_file import build_audit_file_export
+from townlight_grants.compliance_calendar import build_compliance_calendar
+from townlight_grants.eligibility import match_grant_eligibility
+from townlight_grants.main import app
+from townlight_grants.opportunity_triage import triage_opportunity
 
 
 client = TestClient(app)

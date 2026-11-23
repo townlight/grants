@@ -7,8 +7,8 @@ from uuid import uuid4
 import sqlalchemy as sa
 from sqlalchemy import Engine, create_engine
 
-from civicgrants.compliance_calendar import build_compliance_calendar
-from civicgrants.opportunity_triage import OpportunityTriage, triage_opportunity
+from townlight_grants.compliance_calendar import build_compliance_calendar
+from townlight_grants.opportunity_triage import OpportunityTriage, triage_opportunity
 
 
 metadata = sa.MetaData()

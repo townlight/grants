@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from civicgrants.opportunity_triage import DISCLAIMER, triage_opportunity
+from townlight_grants.opportunity_triage import DISCLAIMER, triage_opportunity
 
 
 @dataclass(frozen=True)

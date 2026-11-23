@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- Add persisted staff Grants cases and a verified closeout manifest for the Windows suite candidate.
+- Use the townlight-grants distribution and Townlight Core 1.3.0.dev2.
+
 ## [0.2.0] - 2026-05-11
 
 ### Changed
