@@ -5,8 +5,8 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from civicgrants.main import app, _dispose_grant_repository
-from civicgrants.persistence import GrantRecordsRepository
+from townlight_grants.main import app, _dispose_grant_repository
+from townlight_grants.persistence import GrantRecordsRepository
 
 
 client = TestClient(app)

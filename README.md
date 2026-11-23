@@ -1,12 +1,14 @@
-> **Parked foundation — outside the released Windows suite.** This repository contains exploratory/support code, not a completed Townlight product. It is not installed or supported by Windows 1.8.1.1. Historical examples, package names and dependency pins below describe this foundation and must not be used as current suite installation instructions. Use the [released Windows suite, current modules and acceptance limits](https://townlight.github.io/versions.html).
+> **Windows candidate.** See the [published Windows release and tested modules](https://townlight.github.io/versions.html) for current downloads.
 
 <a id="civicgrants"></a>
 
 # Townlight Grants
 
+Townlight Grants 0.3.0 is part of the upcoming Windows suite candidate. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings.
+
 Townlight Grants is the Townlight module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, staff review queues, review-required Townlight Records grant context packets, adversarial local integration mocks, and audit-ready grant files.
 
-Current state: **v0.2.0 grant support and staff review queue runtime**. This repo ships a FastAPI package aligned to the historical CivicCore v1.1.0 release wheel, health/root endpoints, documentation gates, deterministic and database-backed grant opportunity triage, compliance-calendar records, staff-only review queue workflows, review-required CivicRecords/grant-file context packets, adversarial local integration mocks, application outline helper, audit-ready export checklist, and accessible public sample UI at `/civicgrants`. It does **not** ship live funder feeds, official eligibility decisions, legal advice, live LLM calls, submission portals, award acceptance, or grant system-of-record integrations.
+Current state: **v0.3.0 grant support and staff review queue runtime**. This repo ships a FastAPI package using Townlight Core 1.3.0.dev2, health/root endpoints, documentation gates, deterministic and database-backed grant opportunity triage, compliance-calendar records, staff-only review queue workflows, review-required CivicRecords/grant-file context packets, adversarial local integration mocks, application outline helper, audit-ready export checklist, and accessible public sample UI at `/civicgrants`. It does **not** ship live funder feeds, official eligibility decisions, legal advice, live LLM calls, submission portals, award acceptance, or grant system-of-record integrations.
 
 <a id="what-civicgrants-does"></a>
 
@@ -38,10 +40,10 @@ Current state: **v0.2.0 grant support and staff review queue runtime**. This rep
 
 ## Townlight Core Dependency
 
-Townlight Grants installs against the historical CivicCore v1.1.0 release wheel:
+Townlight Grants installs against the pinned Townlight Core source:
 
 ```bash
-python -m pip install https://github.com/townlight/core/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+python -m pip install "townlight-core @ git+https://github.com/townlight/core.git@2f6ba9be4a95e3772dc47a3682ac780c5283b626"
 ```
 
 ## API Surface

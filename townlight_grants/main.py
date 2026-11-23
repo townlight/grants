@@ -2,26 +2,26 @@
 
 import os
 
-from civiccore import __version__ as CIVICCORE_VERSION
-from civiccore.auth import staff_key_gate
+from townlight_core import __version__ as CIVICCORE_VERSION
+from townlight_core.auth import staff_key_gate
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
-from civicgrants import __version__
-from civicgrants.application_draft import draft_application_outline
-from civicgrants.audit_file import build_audit_file_export
-from civicgrants.compliance_calendar import build_compliance_calendar
-from civicgrants.eligibility import match_grant_eligibility
-from civicgrants.integration_mocks import validate_grant_context_mocks
-from civicgrants.opportunity_triage import triage_opportunity
-from civicgrants.persistence import (
+from townlight_grants import __version__
+from townlight_grants.application_draft import draft_application_outline
+from townlight_grants.audit_file import build_audit_file_export
+from townlight_grants.compliance_calendar import build_compliance_calendar
+from townlight_grants.eligibility import match_grant_eligibility
+from townlight_grants.integration_mocks import validate_grant_context_mocks
+from townlight_grants.opportunity_triage import triage_opportunity
+from townlight_grants.persistence import (
     GrantRecordsRepository,
     StaffReviewQueueItem,
     StaffReviewSummary,
     StoredComplianceCalendar,
 )
-from civicgrants.public_ui import render_public_lookup_page
+from townlight_grants.public_ui import render_public_lookup_page
 
 
 app = FastAPI(
