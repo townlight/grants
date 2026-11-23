@@ -1,10 +1,10 @@
-> **Windows candidate.** See the [published Windows release and tested modules](https://townlight.github.io/versions.html) for current downloads.
+> **Windows beta 1.9.3.1.** See the [GitHub release](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1) for downloads.
 
 <a id="civicgrants"></a>
 
 # Townlight Grants
 
-Townlight Grants 0.3.0 is part of the upcoming Windows suite candidate. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings.
+Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.1. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the [GitHub release](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1).
 
 Townlight Grants is the Townlight module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, staff review queues, review-required Townlight Records grant context packets, adversarial local integration mocks, and audit-ready grant files.
 

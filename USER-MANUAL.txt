@@ -2,7 +2,7 @@
 
 # Townlight Grants User Manual
 
-Townlight Grants 0.3.0 is part of the upcoming Windows suite candidate. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings.
+Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.1. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the [GitHub release](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1).
 
 ## For Non-Technical Users
 
