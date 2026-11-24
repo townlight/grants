@@ -1,28 +1,114 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Townlight Grants - grant support for Townlight</title>
-<style>
-body{margin:0;font-family:"Aptos","Segoe UI",sans-serif;color:#17202a;background:linear-gradient(135deg,#fff7e6,#edf7ef)}main,header,footer{width:min(1080px,calc(100% - 32px));margin:auto}header{padding:56px 0 24px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:#244f73;font-weight:800}h1{font:700 clamp(2.5rem,7vw,5.5rem)/.95 Georgia,serif;margin:.1em 0}.lede{font-size:1.25rem;line-height:1.6;max-width:820px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:rgba(255,255,255,.88);border:1px solid #dac7a4;border-radius:24px;padding:24px;box-shadow:0 18px 36px #26323b18}.badge{display:inline-block;background:#2f654c;color:white;padding:.5rem .8rem;border-radius:999px;font-weight:900}a{color:#244f73}:focus-visible{outline:4px solid #d8ad48;outline-offset:3px}@media(max-width:720px){.grid{grid-template-columns:1fr}header{padding-top:34px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Townlight Grants</title>
+  <meta name="description" content="Grants uses existing staff roles to link the adopted budget, signed contract and Records, assign and review work, record awards and reports, then close with a SHA-256 archive. It does not submit applications or make payments.">
+  <link rel="canonical" href="https://townlight.github.io/products/grants/">
+  <meta property="og:title" content="Townlight Grants">
+  <meta property="og:description" content="Grants uses existing staff roles to link the adopted budget, signed contract and Records, assign and review work, record awards and reports, then close with a SHA-256 archive. It does not submit applications or make payments.">
+  <meta property="og:image" content="https://townlight.github.io/brand/png/townlight-hall-social-preview.png">
+  <link rel="icon" href="https://townlight.github.io/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="https://townlight.github.io/brand/png/townlight-hall-app-icon-180.png">
+  <link rel="stylesheet" href="https://townlight.github.io/assets/site.css">
+  <link rel="stylesheet" href="https://townlight.github.io/assets/landing.css">
 </head>
-<body>
-<header>
-  <p class="eyebrow">Townlight / Townlight Grants</p>
-  <h1>Grant files that survive the audit.</h1>
-  <p class="lede">Townlight Grants v0.3.0 ships opportunity triage, eligibility factors, application outlines, compliance calendars, optional database-backed grant records, staff review queues, Townlight Records context packets, adversarial local mocks, audit-ready exports, and an accessible sample UI.</p>
-  <p>Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.2. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">GitHub release</a>.</p>
-</header>
-<main><section id="windows-current"><h2>Windows 1.9.3.2 current release</h2><p>Townlight for Windows 1.9.3.2 is the current signed public beta. <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release and downloads</a> · <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/ACCEPTANCE-Windows-1.9.3.2.md">Acceptance and limits</a></p><p>For an existing city, make and verify a backup, close Townlight, run the signed Windows 1.9.3.2 MSI, then reopen Townlight under the same Windows account and existing profile. Direct upgrade is tested from 1.9.3.1; earlier paths have separate prior evidence.</p></section>
-  <section class="grid">
-    <article class="card"><h2>What ships</h2><ul><li>Sample opportunity triage.</li><li>Eligibility-factor matching.</li><li>Application outline helper.</li><li>Compliance calendar helper.</li><li>Optional grant persistence with <code>CIVICGRANTS_GRANT_DB_URL</code>.</li><li>Staff queue routes protected by <code>CIVICGRANTS_STAFF_API_KEY</code>.</li><li>Review-required Townlight Records and grant-file context packets.</li><li>Adversarial local integration mocks.</li><li>Audit-ready export checklist.</li><li>Public sample UI at <code>/civicgrants</code>.</li></ul></article>
-    <article class="card"><h2>What does not ship</h2><p>Townlight Grants does not determine official eligibility, submit applications, accept awards, provide legal advice, call live LLMs, use live funder feeds, or replace the grant system of record.</p></article>
-    <article class="card"><h2>Repository</h2><p><a href="https://github.com/townlight/grants">github.com/CivicSuite/civicgrants</a></p></article>
-    <article class="card"><h2>Dependency</h2><p>Pinned to <code>townlight-core==1.3.0.dev2</code>. Townlight Core remains dependency-only; it never imports from Townlight Grants.</p></article>
+<body class="landing">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="landing-wrap masthead-inner">
+      <a href="https://townlight.github.io/" aria-label="Townlight home">
+        <img src="https://townlight.github.io/brand/svg/townlight-hall-lockup.svg" alt="Townlight" width="161" height="34">
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="https://townlight.github.io/#products">Products</a>
+        <a href="https://townlight.github.io/manuals/grants.html">Guide</a>
+        <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/Townlight-Windows-x64-1.9.3.2.msi">Download</a>
+        <a href="https://github.com/townlight/grants">Source</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+  <section class="landing-hero" aria-labelledby="title">
+    <div class="landing-wrap hero-layout">
+      <div>
+        <div class="eyebrow">Townlight Grants / Finance</div>
+        <h1 id="title">Grant files that survive review.</h1>
+        <p class="hero-copy">Grants uses existing staff roles to link the adopted budget, signed contract and Records, assign and review work, record awards and reports, then close with a SHA-256 archive. It does not submit applications or make payments.</p>
+        <div class="actions"><a href="https://townlight.github.io/manuals/grants.html" class="button primary">Read the operating guide</a><a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2" class="button">View Windows release</a></div>
+        <p class="release-line">Windows public beta · Townlight 1.9.3.2 · AGPL-3.0-only</p>
+      </div>
+      <figure class="workflow-sheet">
+      <figcaption><span class="eyebrow">Workflow guide</span>From assignment to SHA-256 archive</figcaption>
+      <ol>
+        <li><strong>Link records</strong><span>Link the adopted budget, signed contract and Records.</span></li>
+        <li><strong>Assign, review and record</strong><span>Assign work with existing staff roles, review it, and record the award and reports.</span></li>
+        <li><strong>Close and archive</strong><span>Close the grant file and produce a SHA-256 archive.</span></li>
+      </ol>
+      <p class="sheet-note">Illustrated workflow · staff review at each decision</p>
+    </figure>
+    </div>
   </section>
-</main>
-<footer><p>AGPL-3.0 code. CC BY 4.0 docs. Run locally by the city.</p></footer>
+  <section class="landing-section landing-band" aria-labelledby="candidate-grants">
+    <div class="landing-wrap">
+      <div class="eyebrow">Signed public beta · Windows 1.9.3.2</div>
+      <h2 id="candidate-grants">Windows 1.9.3.2</h2>
+      <p class="component-version">Townlight Grants v0.3.0 is packaged with Windows beta 1.9.3.2; distribution <code>townlight-grants</code>.</p>
+      <p class="section-intro">Private Records staff attachment downloads verify expected file size and SHA-256 before saving; Station operator controls work through session renewal. Release acceptance defines the tested workflows and limits; it does not claim every module was retested.</p>
+      <ul class="landing-link-list"><li><a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/Townlight-Windows-x64-1.9.3.2.msi">Windows 1.9.3.2 installer</a></li><li><a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release catalog</a></li><li><a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/SHA256SUMS-Windows-1.9.3.2.txt">SHA-256 checksums</a></li><li><a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/ACCEPTANCE-Windows-1.9.3.2.md">Acceptance and limits</a></li></ul>
+    </div>
+  </section>
+  <section class="landing-section landing-band" aria-labelledby="previous-1-9-3-1">
+    <div class="landing-wrap">
+      <div class="eyebrow">Previous release</div>
+      <h2 id="previous-1-9-3-1">Previous release: Windows 1.9.3.1</h2>
+      <p class="section-intro">Previous Windows release 1.9.3.1: documents the approved hosted Windows Grants workflow. See the release acceptance for exact evidence and limits.</p>
+      <ul class="landing-link-list"><li><a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.1/ACCEPTANCE-Windows-1.9.3.1.md">Windows 1.9.3.1 acceptance</a></li><li><a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1">Release catalog</a></li><li><a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.1/ACCEPTANCE-Windows-1.9.3.1.md">Acceptance and limits</a></li></ul>
+    </div>
+  </section>
+  <section class="landing-section" aria-labelledby="capabilities">
+    <div class="landing-wrap">
+      <div class="eyebrow">Inside the workflow</div>
+      <h2 id="capabilities">What Grants supports</h2>
+      <div class="capability-columns">
+        <article><h3>Existing staff roles</h3><p>Use existing staff roles to assign and review grant work.</p></article>
+        <article><h3>Linked records</h3><p>Link the adopted budget, signed contract and Records.</p></article>
+        <article><h3>Award, report and archive</h3><p>Record the award and reports, close the file, and produce a SHA-256 archive.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="landing-section landing-band" aria-labelledby="getting-started">
+    <div class="landing-wrap landing-split">
+      <div>
+        <div class="eyebrow">Evaluate locally</div>
+        <h2 id="getting-started">Start with one real workflow.</h2>
+        <p>Use an existing grant file, link the adopted budget, signed contract and Records, and follow the review checklist in the user manual.</p>
+        <ul class="landing-link-list"><li><a href="https://townlight.github.io/manuals/grants.html">Operating guide</a></li><li><a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release and checksums</a></li></ul>
+      </div>
+      <div class="landing-panel">
+        <h3>Scope of this beta</h3>
+        <p>Grants does not submit applications, accept awards, or make payments. Staff review and record every award, report and closeout.</p>
+        <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/ACCEPTANCE-Windows-1.9.3.2.md">Read the installed acceptance</a>
+      </div>
+    </div>
+  </section>
+  <section class="landing-section" aria-labelledby="technical">
+    <div class="landing-wrap">
+      <div class="eyebrow">For technical teams</div>
+      <h2 id="technical">Inspect the implementation.</h2>
+      <p class="section-intro">Trace the workflow to the component source pinned by the Windows release. Use the reference for integration details and the repository to report an issue or contribute a change.</p>
+      <ul class="landing-link-list"><li><a href="https://github.com/townlight/grants/tree/790892f620767a2fcaf6b8f072ff45df15a963c1">Released component source</a></li><li><a href="https://github.com/townlight/grants/tree/main/docs">API reference</a></li><li><a href="https://github.com/townlight/grants/blob/main/USER-MANUAL.md">Owner manual (Markdown)</a></li><li><a href="https://github.com/townlight/grants">Repository and contributions</a></li></ul>
+
+    </div>
+  </section>
+  </main>
+<aside class="release-note" aria-label="Current release"><p><strong>Current release:</strong> Townlight for Windows 1.9.3.2 is a signed public beta. Private Records staff attachment downloads verify expected file size and SHA-256 before saving; Station operator controls work through session renewal. Release acceptance defines tested workflows and limits; it does not claim every module was retested. <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/Townlight-Windows-x64-1.9.3.2.msi">Download MSI</a> · <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release catalog</a> · <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/SHA256SUMS-Windows-1.9.3.2.txt">SHA-256 checksums</a> · <a href="https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/ACCEPTANCE-Windows-1.9.3.2.md">Acceptance and limits</a> · <a href="https://townlight.github.io/versions.html">Versions</a></p></aside>
+  <footer class="landing-footer">
+    <div class="landing-wrap">
+      <span>Townlight · Open source municipal software</span>
+      <ul class="landing-link-list"><li><a href="https://townlight.github.io/support.html">Support</a></li><li><a href="https://townlight.github.io/versions.html">Versions</a></li><li><a href="https://townlight.github.io/brand/">Brand</a></li><li><a href="https://townlight.github.io/terms.html">Terms and license</a></li></ul>
+    </div>
+  </footer>
 </body>
 </html>
