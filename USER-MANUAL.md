@@ -1,8 +1,14 @@
+## Windows 1.9.3.2 current release
+
+Townlight for Windows 1.9.3.2 is the current signed public beta. See the [release notes](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2) and [acceptance record](https://github.com/townlight/townlight/releases/download/townlight-windows-v1.9.3.2/ACCEPTANCE-Windows-1.9.3.2.md).
+
+Townlight Windows 1.9.3.2 is a signed Suite package; Data, Budget, and Grants were first bundled in Windows 1.9.3.1 and remain in the current signed 1.9.3.2 Windows beta.
+
 <a id="civicgrants-user-manual"></a>
 
 # Townlight Grants User Manual
 
-Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.1. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the [GitHub release](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1).
+Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.2. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the [GitHub release](https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2).
 
 ## For Non-Technical Users
 
