@@ -1,14 +1,14 @@
-Windows 1.9.3.2 current release
+Windows 1.10.0.1 current release
 
-Townlight for Windows 1.9.3.2 is the current signed public beta. See the release notes and acceptance record.
+Townlight for Windows 1.10.0.1 is the current signed public beta. See the release notes and acceptance record.
 
-Townlight Windows 1.9.3.2 is a signed Suite package; Data, Budget, and Grants were first bundled in Windows 1.9.3.1 and remain in the current signed 1.9.3.2 Windows beta.
+Townlight Windows 1.10.0.1 is a signed Suite package; Data, Budget, and Grants were first bundled in Windows 1.9.3.1 and remain in the current signed 1.10.0.1 Windows beta.
 
-  Windows beta 1.9.3.2. See the GitHub release for downloads.
+  Windows beta 1.10.0.1. See the GitHub release for downloads.
 
 Townlight Grants
 
-Townlight Grants 0.3.0 is packaged with Windows beta 1.9.3.2. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the GitHub release.
+Townlight Grants 0.3.0 is packaged with Windows beta 1.10.0.1. Staff can draft an opportunity, assign it to a named staff member, review it against an adopted Budget revision, a signed Contract and a Records request, then record the award, complete its reporting and download a verified closeout archive. The standalone API provides advisory workpapers and retains its original routes and settings. See the GitHub release.
 
 Townlight Grants is the Townlight module for grant opportunity triage, eligibility-factor matching, application outline support, compliance-calendar scaffolding, staff review queues, review-required Townlight Records grant context packets, adversarial local integration mocks, and audit-ready grant files.
 
